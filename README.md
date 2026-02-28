@@ -130,6 +130,42 @@ System Architecture
 Architecture Overview:
 
 User → Chrome Extension → Node Backend → Gemini API → Backend → Extension → User
+graph LR
+    User[User]
+   
+    subgraph Client ["Client (Browser)"]
+        ChromeExt[Chrome Extension]
+        Popup[Popup UI]
+    end
+   
+    subgraph Server ["Server (Cloud)"]
+        NodeBackend[Node.js Backend]
+    end
+   
+    subgraph external ["External AI"]
+        GeminiAPI((Gemini AI API))
+    end
+   
+    %% Flows
+    User -->|Interacts with| Popup
+    Popup -.->|Requests action| ChromeExt
+    ChromeExt -->|1. Extracts Webpage Content| ChromeExt
+    ChromeExt -->|2. Sends Content (POST)| NodeBackend
+   
+    NodeBackend -->|3. Passes Content & Prompt| GeminiAPI
+    GeminiAPI -->|4. Returns Summary & Quiz JSON| NodeBackend
+   
+    NodeBackend -->|5. Sends Results (Response)| ChromeExt
+    ChromeExt -->|6. Renders Results| Popup
+    Popup -->|Displays| User
+
+    %% Styling
+    style ChromeExt fill:#f9f,stroke:#333,stroke-width:2px
+    style NodeBackend fill:#ccf,stroke:#333,stroke-width:2px
+    style GeminiAPI fill:#ff9,stroke:#333,stroke-width:2px,stroke-dasharray: 5 5
+    style Popup fill:#fff,stroke:#333,stroke-width:1px
+    style Client fill:#eee,stroke:#999
+    style Server fill:#eee,stroke:#999
 
 Explanation:
 
@@ -190,7 +226,7 @@ Response:
 Project Demo
 Video
 
-[Add your demo video link here – YouTube / Google Drive]
+[[Add your demo video link here – YouTube / Google Drive]](https://drive.google.com/file/d/1e1l2ezchCm_m61THt0Bisb0C9tfFbEcP/view?usp=sharing)
 
 The video demonstrates:
 
