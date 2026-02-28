@@ -82,7 +82,8 @@ Installation
 Clone the Repository
 git clone https://github.com/DIYA-K-GIT/PrepNova-frontend.git
 git clone https://github.com/DIYA-K-GIT/PrepNova-backend.git
-cd your-repo-name
+cd PrepNova-frontend
+cd PrepNova-backend
 Backend Setup
 cd backend
 npm install
@@ -90,13 +91,13 @@ npm install
 Create a .env file inside backend folder:
 
 GEMINI_API_KEY=your_api_key_here
-PORT=5000
+PORT=3000
 Run Backend
 node server.js
 
 Server runs at:
 
-http://localhost:5000
+http://localhost:3000
 Load Chrome Extension
 
 Open Chrome
@@ -112,15 +113,16 @@ Select the extension folder
 Project Documentation
 For Software
 Screenshots (Add at least 3)
-
-
-Popup UI showing summary and quiz generation
-
-
-AI-generated summary from webpage content
-
-
-Auto-generated quiz questions for revision
+main interface of extension pop up
+<img width="1782" height="970" alt="Screenshot 2026-02-28 083445" src="https://github.com/user-attachments/assets/d52fae6c-380a-492a-8214-2ce059201d44" />
+summarizing using ai
+<img width="417" height="758" alt="Screenshot 2026-02-28 083528" src="https://github.com/user-attachments/assets/185291ef-7461-4e72-8a49-086cf617d23f" />
+ai quiz generation
+<img width="504" height="771" alt="Screenshot 2026-02-28 083541" src="https://github.com/user-attachments/assets/82f515c4-ca04-42b7-acae-8dd4617521eb" />
+toggle mode on distraction restricting window(youtube,netflix,instagram etc.)
+<img width="1879" height="949" alt="Screenshot 2026-02-28 083613" src="https://github.com/user-attachments/assets/82286f94-f076-4d85-973c-2242bf530df9" />
+reminder pop up after break
+<img width="750" height="368" alt="Screenshot 2026-02-28 083658" src="https://github.com/user-attachments/assets/0f1a6c16-3593-416f-8762-e62583c63d8f" />
 
 Diagrams
 System Architecture
@@ -160,7 +162,7 @@ Results displayed in extension popup
 Additional Documentation
 API Documentation
 Base URL
-http://localhost:5000
+http://localhost:3000
 Endpoints
 POST /summarize
 
