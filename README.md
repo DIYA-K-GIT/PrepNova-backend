@@ -1,2 +1,259 @@
-# PrepNova-backend
-Prepnova extension backend
+PrepNova AI 🎯
+Basic Details
+Team Name:
+
+Scribble Dribble
+
+Team Members
+
+Member 1: Helen Eldho – Model Engineering College, Thrikkakkara
+
+Member 2: Sameeha Fathima – Model Engineering College, Thrikkakkara
+
+Hosted Project Link
+
+https://prepnova-backend.onrender.com (Chrome extension backend deployed link)
+
+Project Description
+
+PrepNova AI is an AI-powered Chrome Extension that helps students stay productive while browsing. It summarizes webpage content and generates quick quizzes using Gemini AI, enabling faster understanding and active revision directly from any website.
+
+The Problem Statement
+
+Students often get distracted while browsing and struggle to quickly understand lengthy web content. There is no integrated tool that combines summarization, quiz generation, and focus assistance inside the browser itself.
+
+The Solution
+
+PrepNova AI extracts webpage content, securely sends it to a Node.js backend, and uses Gemini API to generate summaries and quizzes. The backend masks the API key for security, ensuring safe AI integration while delivering intelligent learning assistance directly in the browser.
+
+Technical Details
+Technologies/Components Used
+For Software:
+
+Languages used:
+
+JavaScript
+
+HTML
+
+CSS
+
+Frameworks used:
+
+Node.js (Backend)
+
+Libraries used:
+
+Express.js
+
+Axios
+
+CORS
+
+Chrome Extensions API
+
+Tools used:
+
+VS Code
+
+Git & GitHub
+
+Chrome Developer Tools
+
+Google Gemini API
+
+Features
+
+AI-powered webpage summarization
+
+Automatic quiz generation from extracted content
+
+Focus reminder system
+
+Works on all websites
+
+Secure API key masking via Node backend
+
+Clean and aesthetic blue-themed UI
+
+Implementation
+For Software
+Installation
+Clone the Repository
+git clone https://github.com/DIYA-K-GIT/PrepNova-frontend.git
+git clone https://github.com/DIYA-K-GIT/PrepNova-backend.git
+cd your-repo-name
+Backend Setup
+cd backend
+npm install
+
+Create a .env file inside backend folder:
+
+GEMINI_API_KEY=your_api_key_here
+PORT=5000
+Run Backend
+node server.js
+
+Server runs at:
+
+http://localhost:5000
+Load Chrome Extension
+
+Open Chrome
+
+Go to chrome://extensions/
+
+Enable Developer Mode
+
+Click Load Unpacked
+
+Select the extension folder
+
+Project Documentation
+For Software
+Screenshots (Add at least 3)
+
+
+Popup UI showing summary and quiz generation
+
+
+AI-generated summary from webpage content
+
+
+Auto-generated quiz questions for revision
+
+Diagrams
+System Architecture
+
+Architecture Overview:
+
+User → Chrome Extension → Node Backend → Gemini API → Backend → Extension → User
+
+Explanation:
+
+Extension extracts webpage content
+
+Sends content to Node backend
+
+Backend securely calls Gemini API
+
+AI returns summary and quiz
+
+Results displayed in popup
+
+Application Workflow
+
+User opens a webpage
+
+Clicks FocusMode AI extension
+
+Content is extracted via content.js
+
+Data sent to Node backend
+
+Backend calls Gemini API securely
+
+Summary and quiz returned
+
+Results displayed in extension popup
+
+Additional Documentation
+API Documentation
+Base URL
+http://localhost:5000
+Endpoints
+POST /summarize
+
+Description:
+Generates summary and quiz from webpage content
+
+Request Body:
+
+{
+  "text": "Webpage content here"
+}
+
+Response:
+
+{
+  "summary": "Short AI-generated summary",
+  "quiz": [
+    {
+      "question": "What is the main idea?",
+      "options": ["A", "B", "C", "D"],
+      "answer": "A"
+    }
+  ]
+}
+Project Demo
+Video
+
+[Add your demo video link here – YouTube / Google Drive]
+
+The video demonstrates:
+
+Extension loading in Chrome
+
+Content summarization
+
+Quiz generation
+
+Backend security masking API key
+
+Focus reminder functionality
+
+AI Tools Used (Transparency Section)
+
+Tool Used: Google Gemini API
+Purpose: Text summarization and quiz generation
+
+Tool Used: ChatGPT
+Purpose: Debugging assistance, architectural guidance, and documentation formatting
+
+Key Prompts Used:
+
+"Create a secure Node.js backend for Gemini API integration"
+
+"Generate quiz questions from webpage content"
+
+"Debug Chrome extension manifest v3 issues"
+
+Percentage of AI-generated code: ~30%
+
+Human Contributions
+
+Architecture design and planning
+
+Chrome extension development
+
+Backend implementation and API masking
+
+UI/UX design decisions
+
+Integration and testing
+
+Team Contributions
+
+Helen Eldho:
+
+Chrome Extension frontend development
+
+UI/UX design
+
+Content extraction logic
+
+Testing and debugging
+
+Sameeha Fathima:
+
+Node.js backend development
+
+Gemini API integration
+
+API security implementation
+
+Deployment setup
+
+License
+
+This project is licensed under the MIT License.
